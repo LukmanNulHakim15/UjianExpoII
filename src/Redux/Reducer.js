@@ -1,7 +1,8 @@
-import  combineReducers from 'redux'
+import  {combineReducers} from 'redux';
 
 const initialLoginGlobal={
-    isLogin=false
+    isLogin:false,
+    dataUser:{},
 }
 
 function LoginReducer(state=initialLoginGlobal,action){

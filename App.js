@@ -1,18 +1,21 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
-import {createStackNavigator} from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native';
-import Register from './src/Page/Register';
+import { Provider } from 'react-redux';
+import Store from './src/Redux/Store';
+import Router from './src/router/Router';
 
-const Stack = createStackNavigator();
- class App extends Component {
+
+
+
+
+ export class App extends Component {
   render() {
     return (
+      <Provider store={Store}>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Register" component={Register}/>
-        </Stack.Navigator>
+       <Router></Router>
       </NavigationContainer>
+      </Provider>
     )
   }
 }

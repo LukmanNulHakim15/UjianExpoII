@@ -51,9 +51,9 @@ import { Text, View, StyleSheet, TextInput, onChangeText, TouchableOpacity } fro
                 placeholder="Phone"
                 />
 
-                <Text> umur </Text>
+                <Text> umur </Text> 
                 <TextInput
-                style={styles.input}
+                style={styles.input}    
                 onChangeText={(data)=>{this.setState({umur:data})}}
                 placeholder="Umur"
                 />
